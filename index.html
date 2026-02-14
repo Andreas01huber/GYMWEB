@@ -1,142 +1,291 @@
-<!doctype html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HS Strength | Verstellbare Hanteln für Zuhause</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="announcement">🎁 Erhalte 10% Rabatt auf deine erste Bestellung – <button id="openPopupLink">Code holen</button></div>
+:root {
+  --bg: #070707;
+  --surface: #111111;
+  --surface-2: #161616;
+  --text: #f2f2f2;
+  --muted: #b8b8b8;
+  --line: #2a2a2a;
+  --accent: #ffffff;
+  --radius: 16px;
+}
 
-  <header class="site-header">
-    <div class="logo">HS <span>Strength</span></div>
-    <nav class="nav-links">
-      <a href="#features">Vorteile</a>
-      <a href="#products">Bestseller</a>
-      <a href="#story">Unsere Story</a>
-      <a href="#newsletter">Newsletter</a>
-    </nav>
-    <button class="cart-btn" id="cartBtn">🛒 Warenkorb</button>
-  </header>
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
 
-  <main>
-    <section class="hero">
-      <div class="hero-text">
-        <p class="kicker">Premium Home Gym Equipment</p>
-        <h1>Verstellbare Hanteln für echte Gymbuddys.</h1>
-        <p>
-          Wir sind Patrick Schütz und Andreas Huber. Mit HS Strength bauen wir eine Marke für alle, die
-          zuhause ernsthaft trainieren wollen: platzsparend, hochwertig und motivierend.
-        </p>
-        <div class="trust-row">
-          <span>Kostenlose Lieferung</span>
-          <span>75.000+ Kunden</span>
-          <span>1.800+ Bewertungen</span>
-          <span>2 Jahre Garantie</span>
-        </div>
-        <a href="#products" class="cta">Jetzt Hanteln entdecken</a>
-      </div>
-      <div class="hero-card">
-        <h3>Warum HS Strength?</h3>
-        <ul>
-          <li>5–40 kg in einem Set</li>
-          <li>Sekundenschnelle Gewichtsverstellung</li>
-          <li>Robustes, langlebiges Design</li>
-          <li>Für Anfänger bis Fortgeschrittene</li>
-        </ul>
-      </div>
-    </section>
+body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+}
 
-    <section id="features" class="features">
-      <h2>Alles für dein Home-Gym in einem System</h2>
-      <div class="grid">
-        <article>
-          <h3>Platzsparend</h3>
-          <p>Ersetze einen ganzen Hantelständer durch ein kompaktes Set.</p>
-        </article>
-        <article>
-          <h3>Progressiv trainieren</h3>
-          <p>Steigere dein Training sauber und flexibel mit kleinen Gewichtsschritten.</p>
-        </article>
-        <article>
-          <h3>Starkes Preis-Leistungs-Verhältnis</h3>
-          <p>Premium Feeling, ohne ein Studio zuhause nachbauen zu müssen.</p>
-        </article>
-      </div>
-    </section>
+img { max-width: 100%; display: block; border-radius: 12px; }
+a { color: inherit; }
 
-    <section id="products" class="products">
-      <div class="section-head">
-        <h2>Unsere Bestseller</h2>
-        <a href="#">Alle anzeigen</a>
-      </div>
-      <div class="product-grid">
-        <article class="product-card">
-          <span class="badge">Nicht verfügbar</span>
-          <h3>HS Adjustable Dumbbells 2x24kg</h3>
-          <p class="reviews">386 Bewertungen</p>
-          <p class="price">€299 <s>€359</s></p>
-        </article>
-        <article class="product-card">
-          <span class="badge">Bestseller</span>
-          <h3>HS Adjustable Dumbbells 2x40kg</h3>
-          <p class="reviews">214 Bewertungen</p>
-          <p class="price">€449 <s>€529</s></p>
-        </article>
-        <article class="product-card">
-          <span class="badge">Bundle</span>
-          <h3>HS Set inkl. Bank & Ständer</h3>
-          <p class="reviews">91 Bewertungen</p>
-          <p class="price">€799 <s>€949</s></p>
-        </article>
-      </div>
-    </section>
+.announcement {
+  background: #fff;
+  color: #111;
+  text-align: center;
+  padding: .65rem 1rem;
+  font-weight: 600;
+  font-size: .9rem;
+}
+.announcement button {
+  background: #111;
+  color: #fff;
+  border: 0;
+  margin-left: .6rem;
+  padding: .35rem .7rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
 
-    <section id="story" class="story">
-      <h2>TRAININGSGERÄTE, DENEN DU VERTRAUEN KANNST</h2>
-      <p>
-        Unsere Mission ist simpel: Jeder soll zuhause effektiv trainieren können – mit Equipment,
-        das sich wertig anfühlt und Jahre hält. Wir entwickeln HS Strength als Marke für Menschen,
-        die Training nicht als Trend sehen, sondern als festen Bestandteil ihres Alltags.
-      </p>
-      <a href="#" class="cta ghost">Unsere Geschichte</a>
-    </section>
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  background: rgba(7, 7, 7, .86);
+  border-bottom: 1px solid var(--line);
+}
 
-    <section id="newsletter" class="newsletter">
-      <h2>Erhalte 10% Rabatt auf deine erste Bestellung</h2>
-      <p>Melde dich an und sichere dir Angebote, Produktupdates und Early Access.</p>
-      <form id="newsletterForm">
-        <input type="email" id="email" placeholder="Deine E-Mail-Adresse" required />
-        <button type="submit">Abonnieren</button>
-      </form>
-      <p class="hint">Mit Anmeldung akzeptierst du unsere Datenschutzrichtlinien.</p>
-      <p id="newsletterSuccess" class="success" aria-live="polite"></p>
-    </section>
-  </main>
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: .9rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
 
-  <footer class="footer">
-    <p>© 2026 HS Strength — Gebaut von Gymbuddys für Gymbuddys.</p>
-  </footer>
+.logo { text-decoration: none; font-size: 1.2rem; font-weight: 800; letter-spacing: .04em; }
+.logo span { font-weight: 400; color: var(--muted); }
 
-  <aside class="drawer" id="cartDrawer" aria-hidden="true">
-    <button class="close" id="closeCart">✕</button>
-    <h3>Warenkorb</h3>
-    <p>Dein Warenkorb ist aktuell leer.</p>
-  </aside>
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: .95rem;
+}
+.nav-links a { text-decoration: none; color: var(--muted); }
+.nav-links a:hover { color: #fff; }
 
-  <div class="overlay" id="overlay" hidden></div>
+.actions { display: flex; gap: .6rem; }
 
-  <div class="popup" id="newsletterPopup" hidden>
-    <button class="close" id="closePopup">✕</button>
-    <h3>10% Rabatt sichern</h3>
-    <p>Melde dich für den HS Strength Newsletter an und erhalte sofort deinen Code.</p>
-    <button class="cta" id="focusNewsletter">Zum Newsletter</button>
-  </div>
+.icon-btn {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: #fff;
+  padding: .48rem .7rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+.menu-btn { display: none; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 1.3rem;
+  align-items: stretch;
+}
+
+.panel {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(160deg, #131313, #0d0d0d);
+  padding: 1.4rem;
+}
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--muted);
+  font-size: .75rem;
+  margin: 0;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin: .6rem 0 1rem; line-height: 1.1; }
+.hero p { color: #d2d2d2; }
+
+.trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: 1rem 0;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: .35rem .7rem;
+  color: var(--muted);
+  font-size: .85rem;
+}
+
+.btn {
+  background: #fff;
+  color: #111;
+  border: 0;
+  border-radius: 10px;
+  padding: .8rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: #fff;
+  border: 1px solid var(--line);
+}
+
+.hero-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+}
+.hero-image img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
+
+.section-title {
+  font-size: 1.8rem;
+  margin: 0 0 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.card p { color: var(--muted); margin-bottom: 0; }
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.category { overflow: hidden; }
+.category img { height: 220px; width: 100%; object-fit: cover; }
+.category a { color: #fff; }
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.product .price { font-size: 1.25rem; font-weight: 700; }
+.product .price s { color: var(--muted); font-weight: 400; margin-left: .45rem; }
+
+.badge {
+  display: inline-block;
+  font-size: .75rem;
+  border: 1px solid var(--line);
+  padding: .2rem .5rem;
+  border-radius: 999px;
+  color: #ddd;
+}
+
+.quotes { position: relative; }
+.quote-slide { display: none; }
+.quote-slide.active { display: block; }
+.quote-controls { display: flex; gap: .5rem; margin-top: .8rem; }
+
+.newsletter-box {
+  display: grid;
+  grid-template-columns: 1.2fr .9fr;
+  gap: 1rem;
+}
+
+form { display: flex; gap: .6rem; flex-wrap: wrap; }
+
+input {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  color: #fff;
+  border-radius: 10px;
+  padding: .75rem;
+  min-width: 240px;
+}
+
+.success { color: #d4ffd6; font-weight: 600; }
+.muted { color: var(--muted); }
+
+.footer {
+  margin-top: 3rem;
+  border-top: 1px solid var(--line);
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.footer h4 { margin: 0 0 .5rem; }
+.footer a { color: var(--muted); text-decoration: none; display: block; margin: .2rem 0; }
+
+.bottom {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  text-align: center;
+  padding: .8rem;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.65);
+  z-index: 160;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -360px;
+  width: min(90vw, 340px);
+  height: 100%;
+  background: #0f0f0f;
+  border-left: 1px solid var(--line);
+  z-index: 170;
+  padding: 1rem;
+  transition: right .25s;
+}
+.drawer.open { right: 0; }
+
+.popup {
+  position: fixed;
+  z-index: 180;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(92vw, 480px);
+  background: #121212;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+.close {
+  float: right;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 950px) {
+  .hero, .newsletter-box, .products, .category-grid, .footer-inner { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  .menu-btn { display: inline-block; }
+}

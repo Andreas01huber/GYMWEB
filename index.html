@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HS Strength | Verstellbare Hanteln für Zuhause</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement">🎁 Erhalte 10% Rabatt auf deine erste Bestellung – <button id="openPopupLink">Code holen</button></div>
+
+  <header class="site-header">
+    <div class="logo">HS <span>Strength</span></div>
+    <nav class="nav-links">
+      <a href="#features">Vorteile</a>
+      <a href="#products">Bestseller</a>
+      <a href="#story">Unsere Story</a>
+      <a href="#newsletter">Newsletter</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn">🛒 Warenkorb</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <p class="kicker">Premium Home Gym Equipment</p>
+        <h1>Verstellbare Hanteln für echte Gymbuddys.</h1>
+        <p>
+          Wir sind Patrick Schütz und Andreas Huber. Mit HS Strength bauen wir eine Marke für alle, die
+          zuhause ernsthaft trainieren wollen: platzsparend, hochwertig und motivierend.
+        </p>
+        <div class="trust-row">
+          <span>Kostenlose Lieferung</span>
+          <span>75.000+ Kunden</span>
+          <span>1.800+ Bewertungen</span>
+          <span>2 Jahre Garantie</span>
+        </div>
+        <a href="#products" class="cta">Jetzt Hanteln entdecken</a>
+      </div>
+      <div class="hero-card">
+        <h3>Warum HS Strength?</h3>
+        <ul>
+          <li>5–40 kg in einem Set</li>
+          <li>Sekundenschnelle Gewichtsverstellung</li>
+          <li>Robustes, langlebiges Design</li>
+          <li>Für Anfänger bis Fortgeschrittene</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <h2>Alles für dein Home-Gym in einem System</h2>
+      <div class="grid">
+        <article>
+          <h3>Platzsparend</h3>
+          <p>Ersetze einen ganzen Hantelständer durch ein kompaktes Set.</p>
+        </article>
+        <article>
+          <h3>Progressiv trainieren</h3>
+          <p>Steigere dein Training sauber und flexibel mit kleinen Gewichtsschritten.</p>
+        </article>
+        <article>
+          <h3>Starkes Preis-Leistungs-Verhältnis</h3>
+          <p>Premium Feeling, ohne ein Studio zuhause nachbauen zu müssen.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="products" class="products">
+      <div class="section-head">
+        <h2>Unsere Bestseller</h2>
+        <a href="#">Alle anzeigen</a>
+      </div>
+      <div class="product-grid">
+        <article class="product-card">
+          <span class="badge">Nicht verfügbar</span>
+          <h3>HS Adjustable Dumbbells 2x24kg</h3>
+          <p class="reviews">386 Bewertungen</p>
+          <p class="price">€299 <s>€359</s></p>
+        </article>
+        <article class="product-card">
+          <span class="badge">Bestseller</span>
+          <h3>HS Adjustable Dumbbells 2x40kg</h3>
+          <p class="reviews">214 Bewertungen</p>
+          <p class="price">€449 <s>€529</s></p>
+        </article>
+        <article class="product-card">
+          <span class="badge">Bundle</span>
+          <h3>HS Set inkl. Bank & Ständer</h3>
+          <p class="reviews">91 Bewertungen</p>
+          <p class="price">€799 <s>€949</s></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="story" class="story">
+      <h2>TRAININGSGERÄTE, DENEN DU VERTRAUEN KANNST</h2>
+      <p>
+        Unsere Mission ist simpel: Jeder soll zuhause effektiv trainieren können – mit Equipment,
+        das sich wertig anfühlt und Jahre hält. Wir entwickeln HS Strength als Marke für Menschen,
+        die Training nicht als Trend sehen, sondern als festen Bestandteil ihres Alltags.
+      </p>
+      <a href="#" class="cta ghost">Unsere Geschichte</a>
+    </section>
+
+    <section id="newsletter" class="newsletter">
+      <h2>Erhalte 10% Rabatt auf deine erste Bestellung</h2>
+      <p>Melde dich an und sichere dir Angebote, Produktupdates und Early Access.</p>
+      <form id="newsletterForm">
+        <input type="email" id="email" placeholder="Deine E-Mail-Adresse" required />
+        <button type="submit">Abonnieren</button>
+      </form>
+      <p class="hint">Mit Anmeldung akzeptierst du unsere Datenschutzrichtlinien.</p>
+      <p id="newsletterSuccess" class="success" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 HS Strength — Gebaut von Gymbuddys für Gymbuddys.</p>
+  </footer>
+
+  <aside class="drawer" id="cartDrawer" aria-hidden="true">
+    <button class="close" id="closeCart">✕</button>
+    <h3>Warenkorb</h3>
+    <p>Dein Warenkorb ist aktuell leer.</p>
+  </aside>
+
+  <div class="overlay" id="overlay" hidden></div>
+
+  <div class="popup" id="newsletterPopup" hidden>
+    <button class="close" id="closePopup">✕</button>
+    <h3>10% Rabatt sichern</h3>
+    <p>Melde dich für den HS Strength Newsletter an und erhalte sofort deinen Code.</p>
+    <button class="cta" id="focusNewsletter">Zum Newsletter</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

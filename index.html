@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HS Strength | Premium Home Gym</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -57,10 +56,7 @@
       </div>
 
       <div class="hero-image">
-        <img
-          src="images/Verstellbare%20Hanteln%20im%20Heimstudio.png"
-          alt="Verstellbare Hanteln im Heimstudio"
-        />
+        <img src="images/hanteln-heimstudio.png" alt="Verstellbare Hanteln im Heimstudio" />
       </div>
     </section>
 
@@ -68,30 +64,21 @@
       <h2 class="section-title">Entdecke das Sortiment</h2>
       <div class="category-grid">
         <article class="card category">
-          <img
-            src="images/ChatGPT%20Image%2014.%20Feb.%202026%2C%2018_35_07.png"
-            alt="HS Strength verstellbare Hantel"
-          />
+          <img src="images/hero-hantel.png" alt="Verstellbare Hantel" />
           <h3>Verstellbare Hanteln</h3>
           <p>Für Kraftaufbau, Hypertrophie und funktionelles Training.</p>
           <a href="hanteln.html">Kategorie anzeigen</a>
         </article>
 
         <article class="card category">
-          <img
-            src="images/Handgriff%20an%20verstellbarem%20Hantelger%C3%A4t.png"
-            alt="Handgriff Detail"
-          />
-          <h3>Kettlebells & Zubehör</h3>
-          <p>Ergänze dein Programm mit Ganzkörper-Bewegungen.</p>
+          <img src="images/handgriff.png" alt="Handgriff Detail" />
+          <h3>Griffe & Zubehör</h3>
+          <p>Details, die du bei jedem Satz spürst – stabil, sicher, langlebig.</p>
           <a href="bundle.html">Kategorie anzeigen</a>
         </article>
 
         <article class="card category">
-          <img
-            src="images/Verstellbare%20Hanteln%20im%20Heimstudio.png"
-            alt="Bundle Setup im Heimstudio"
-          />
+          <img src="images/hanteln-heimstudio.png" alt="Bundle Setup" />
           <h3>Bundles</h3>
           <p>Set-Angebote mit Preisvorteil für dein komplettes Home-Gym.</p>
           <a href="bundle.html">Kategorie anzeigen</a>
@@ -103,6 +90,7 @@
       <h2 class="section-title">Unsere Bestseller</h2>
       <div class="products">
         <article class="card product">
+          <img src="images/hero-hantel.png" alt="HS Adjustable 24" />
           <span class="badge">Bestseller</span>
           <h3>HS Adjustable Dumbbells 2x24kg</h3>
           <p class="muted">386 Bewertungen</p>
@@ -110,6 +98,7 @@
         </article>
 
         <article class="card product">
+          <img src="images/handgriff.png" alt="HS Adjustable 40" />
           <span class="badge">Limited</span>
           <h3>HS Adjustable Dumbbells 2x40kg</h3>
           <p class="muted">214 Bewertungen</p>
@@ -117,6 +106,7 @@
         </article>
 
         <article class="card product">
+          <img src="images/hanteln-heimstudio.png" alt="HS Pro Set" />
           <span class="badge">Bundle</span>
           <h3>HS Pro Set inkl. Bank</h3>
           <p class="muted">91 Bewertungen</p>
@@ -146,6 +136,22 @@
       </div>
     </section>
   </main>
+
+  <aside class="drawer" id="menuDrawer" aria-hidden="true">
+    <button class="close" data-close type="button">✕</button>
+    <h3>Menü</h3>
+    <p><a href="hanteln.html">Verstellbare Hanteln</a></p>
+    <p><a href="bundle.html">Bundles</a></p>
+    <p><a href="faq.html">FAQ</a></p>
+    <p><a href="ueber-uns.html">Über uns</a></p>
+    <p><a href="kontakt.html">Kontakt</a></p>
+  </aside>
+
+  <aside class="drawer" id="cartDrawer" aria-hidden="true">
+    <button class="close" data-close type="button">✕</button>
+    <h3>Warenkorb</h3>
+    <p class="muted">Dein Warenkorb ist aktuell leer.</p>
+  </aside>
 
   <div class="overlay" id="overlay" hidden></div>
 

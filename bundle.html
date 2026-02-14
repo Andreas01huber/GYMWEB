@@ -1,8 +1,7 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>HS Strength | Bundles</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,40 +9,60 @@
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-<header class="site-header">
-  <div class="header-inner">
-    <a class="logo" href="index.html">HS <span>Strength</span></a>
-    <nav class="nav-links">
-      <a href="hanteln.html">Verstellbare Hanteln</a>
-      <a href="bundle.html">Bundles</a>
-      <a href="faq.html">FAQ</a>
-      <a href="ueber-uns.html">Über uns</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-    <div class="actions">
-      <button class="icon-btn menu-btn" id="menuBtn" type="button">☰</button>
-      <button class="icon-btn" id="cartBtn" type="button">🛒 Warenkorb</button>
-    </div>
+<header class="site-header"><div class="header-inner">
+  <a class="logo" href="index.html">HS <span>Strength</span></a>
+  <nav class="nav-links">
+    <a href="hanteln.html">Verstellbare Hanteln</a><a href="bundle.html">Bundles</a><a href="faq.html">FAQ</a><a href="ueber-uns.html">Über uns</a><a href="kontakt.html">Kontakt</a>
+  </nav>
+  <div class="actions">
+    <button class="icon-btn menu-btn" id="menuBtn" type="button">☰</button>
+    <button class="icon-btn" id="cartBtn" type="button">🛒 Warenkorb</button>
   </div>
-</header>
+</div></header>
 
 <main class="container">
   <div class="page-header">
     <div class="breadcrumb">Startseite / Bundles</div>
     <h1>Bundle-Angebote</h1>
-    <p class="muted">Komplette Setups für dein Home-Gym – Preisvorteil & abgestimmte Komponenten.</p>
+    <p class="muted">Komplette Setups für dein Home-Gym – abgestimmt und mit Preisvorteil.</p>
   </div>
 
-  <section class="grid-3 products">
-    <article class="card product">
-      <img src="images/hero-hantel.png" alt="Starter Bundle"/>
+  <section class="grid-3">
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?w=1200&q=80&auto=format&fit=crop" alt="Starter Bundle">
+      <span class="badge">Starter</span>
       <h3>Starter Bundle</h3>
-      <p>2x24kg Hanteln + Trainingsplan PDF + Widerstandsbänder.</p>
+      <p>HS Adjustable 24 + Trainingsplan + Mini-Accessory Pack.</p>
       <p class="price">€349 <s>€419</s></p>
+      <button class="btn" type="button">In den Warenkorb (Demo)</button>
     </article>
 
-    <article class="card product">
-      <img src="images/handgriff.png" alt="Performance Bundle"/>
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=1200&q=80&auto=format&fit=crop" alt="Performance Bundle">
+      <span class="badge">Performance</span>
       <h3>Performance Bundle</h3>
-      <p>2x40kg Hanteln + Schrägbank + Core-Zubehör.</p>
-      <p class="p
+      <p>HS Adjustable 40 + Bank-Option + Core-Zubehör.</p>
+      <p class="price">€899 <s>€1.049</s></p>
+      <button class="btn" type="button">In den Warenkorb (Demo)</button>
+    </article>
+
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&q=80&auto=format&fit=crop" alt="Pro Athlete Bundle">
+      <span class="badge">Pro</span>
+      <h3>Pro Athlete Bundle</h3>
+      <p>HS Adjustable Pro + Stand + Bank + Accessory-Pack.</p>
+      <p class="price">€1.199 <s>€1.399</s></p>
+      <button class="btn" type="button">In den Warenkorb (Demo)</button>
+    </article>
+  </section>
+</main>
+
+<footer class="footer"><div class="bottom">© 2026 HS Strength</div></footer>
+<aside class="drawer" id="menuDrawer" aria-hidden="true"><button class="close" data-close type="button">✕</button><h3>Menü</h3>
+  <p><a href="hanteln.html">Hanteln</a></p><p><a href="bundle.html">Bundles</a></p><p><a href="faq.html">FAQ</a></p><p><a href="ueber-uns.html">Über uns</a></p><p><a href="kontakt.html">Kontakt</a></p>
+</aside>
+<aside class="drawer" id="cartDrawer" aria-hidden="true"><button class="close" data-close type="button">✕</button><h3>Warenkorb</h3><p class="muted">Dein Warenkorb ist aktuell leer.</p></aside>
+<div class="overlay" id="overlay" hidden></div>
+<script src="script.js"></script>
+</body>
+</html>
